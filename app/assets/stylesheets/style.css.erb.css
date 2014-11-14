@@ -59,12 +59,13 @@ h2 {
   color: #aaa;
 }
 
+//= depend_on_asset "redicon.png"
 li {
 	background-repeat: no-repeat;
 	background-position: 20px 12px;
 	padding: 10px 20px 10px 45px;
 	transition: background 0.25s;
-	background-image: url(/assets/redicon.png);
+	background-image: url('<%= asset_path("redicon.png") %> ');
 }
 
 li:hover {

@@ -28,7 +28,7 @@ ready = function () {
 		var store = stores[i];
 
 		var markerIcon = L.icon({
-			iconUrl: "/assets/" + store.color + "marker.png",
+			iconUrl: <%= asset_path( store.color + "marker.png")%>,
 			iconSize: [60, 60],
 			iconAnchor: [30, 60],
 			popupAnchor: [0, -70]
