@@ -1,0 +1,195 @@
+/*@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700);*/
+
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: Raleway, Arial, sans-serif;
+	font-size: 16px;
+  	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: 0.03em;
+	color: #444444;
+}
+
+section#info {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 30%;
+	height: 100%;
+	z-index: 10000;
+	overflow: scroll;
+	box-shadow: 0 0 20px rgba(0,0,0,0.25);
+}
+
+div#new section#info,div#edit section#info {
+	width: 60%;
+}
+
+section#map {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 70%;
+	height: 100%;
+	background: #cccccc;
+}
+div#new section#map,div#edit section#map {
+	width: 40%;
+}
+
+header {
+	padding: 20px 20px 0;
+	margin: 0 0 20px 0;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 16px;  
+	line-height: 1.25;
+}
+
+h1 a {
+  color: #444;
+  text-decoration: none;
+}
+
+h2 {
+  color: #aaa;
+}
+
+li {
+	background-repeat: no-repeat;
+	background-position: 20px 12px;
+	padding: 10px 20px 10px 45px;
+	transition: background 0.25s;
+	background-image: url(/assets/redicon.png);
+}
+
+li:hover {
+	background-color: #dbe5e2;
+}
+
+
+li p {
+	font-size: 14px;
+}
+
+
+li.green {
+	background-image: url(/assets/greenicon.png);
+}
+
+li.blue {
+	background-image: url(/assets/blueicon.png);
+}
+
+li.purple {
+	background-image: url(/assets/purpleicon.png);
+}
+
+
+h3 {
+	margin: 30px 20px 10px 20px;
+	font-weight: 400;
+	font-size: 21px;
+}
+
+
+li h3 {
+	font-size: 16px;
+	font-weight: 500;
+	margin: 0;
+}
+
+/* overwriting leafleft */
+.leaflet-popup-content {
+	font-family: Raleway, Arial, sans-serif;
+}
+
+.leaflet-popup-content h3 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.leaflet-popup-content p {
+	font-size: 14px;
+	margin: 5px 0 0 0;
+}
+
+
+
+
+a.button {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+a.button, input[type=submit] {
+	background: #ea6363;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	color: white;
+
+	text-decoration: none;
+	padding: 5px 7px;
+
+	font-size: 14px;
+  	border-radius: 5px;
+	-webkit-appearance: none;
+}
+
+
+
+form {
+	width: 400px;
+	padding: 20px;
+}
+
+input[type=text],
+input[type=email],
+input[type=number], 
+textarea {
+	-webkit-appearance: none;
+	width: 100%;
+	border: 1px solid #ddd;
+
+	padding: 7px 10px;
+	font-size: 16px;
+	outline: none;
+}
+
+label {
+	font-size: 14px;
+	font-weight: 700;
+}
+
+div.input {
+	margin: 20px 0;
+}
+
+div.error, div.success {
+ margin: 0 0 0 20px;
+ width: 360px;
+ color: #fff;
+ padding: 7px 10px;
+}
+div.error {
+ background: #EA6363;
+}
+div.success {
+  background: #C8DF9F;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#info form {
+	width: 100%;
+  	padding: 0 20px;
+}

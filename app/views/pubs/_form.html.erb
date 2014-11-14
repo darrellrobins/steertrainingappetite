@@ -1,0 +1,18 @@
+<section id="info">
+	<ul><li data-lat="<%=@pub.latitude%>" data-long="<%=@pub.longitude%>">
+<fieldset>
+<%= simple_form_for @pub do |form| %>
+  <%= form.input :name, input_html: {maxlength: 40} %>
+  <%= form.input :address %>
+  <%= form.input :description %>
+  <%= form.input :website, input_html: {maxlength: 40} %>
+  <%# form.input :latitude %>
+  <%# form.input :longitude %>
+  <%= form.button :submit %>
+
+<% end %>
+</fieldset>
+</li></ul>
+<%= link_to 'Back', pubs_path %>
+</section>
+<section id="map"></section>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Appetite</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<% if @pubs %>
+<h1><%= link_to "Appetite, " + pluralize(@pubs.size,"venue"), root_path %></h1>
+<% else %>
+<h1><%= link_to "Appetite", root_path %></h1>
+<% end %>
+<hr />
+<% if ! flash.empty? %>
+<% flash.each do | m | %>
+<p class="<%= m[0] %>"><%= m[1] %></p>
+<% end %>
+<hr />
+<% end %>
+<div class="container" id="<%= params[:action] %>">
+<%= yield %>
+</div> 
+
+</body>
+</html>

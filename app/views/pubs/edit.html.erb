@@ -1,0 +1,4 @@
+<h2><%=@pub.name%> - Edit</h2>
+<%= render "form" %>
+<%= link_to 'Destroy', pub_path(@pub),
+                    method: :delete, data: { confirm: 'Are you sure?' } %>

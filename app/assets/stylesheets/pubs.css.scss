@@ -1,0 +1,26 @@
+// Place all the styles related to the pubs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h1{
+	font-size: 40px !important;
+	text-align: center;
+}
+div.container{
+	position: relative;
+	width: 100%;
+}
+textarea#pub_description{
+	width: 40em;
+	height: 25em;
+}
+textarea#pub_address{
+	width: 25em;
+	height: 5em;
+}
+.fieldlabel{
+	font-weight: bold;
+	margin-right: 10px;
+}
+.error{ color: red;}
+.success{ color: green;}
+.warning{ color: orange;}

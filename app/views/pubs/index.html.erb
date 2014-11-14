@@ -1,0 +1,26 @@
+	<section class="sidebar" id="info">
+		<%= simple_form_for :search, method: :get do |search| %>
+			<%= search.input :query, label: false %>
+		<% end %>
+		<hr />
+		<ul>
+	<% @pubs.each do | pub | %>
+		<pub>
+		<li data-lat="<%= pub.latitude%>" data-long="<%= pub.longitude%>" onclick="location.href='/pubs?search%5Bquery%5D=<%=pub.address%>'">
+			<h3 id="name"><%= link_to pub.name, edit_pub_path(pub) %></h3>
+			<p><span class="fieldlabel">Address:</span><span id="pub_address"><%= pub.address %></span></p>
+			<p><span class="fieldlabel">Website:</span><a href="<%= pub.website %>"><%=pub.website%></a></p>
+			<p><span class="fieldlabel">Description:</span><%= simple_format pub.description %></p>
+			<p><span class="fieldlabel">Lat/Long:</span><span id="lat" data-role="lat"><%= pub.latitude %></span>/<span data-role="long"><%= pub.longitude %></span></p>
+			<hr />
+		</li>
+		</pub>
+
+	<% end %>
+		</ul>
+	</section>
+	<section class="map" id="map">
+	</section>
+		<div class="nav">
+			<%= link_to "New", new_pub_path, class: "button" %>
+		</div>
